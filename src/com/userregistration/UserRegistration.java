@@ -64,7 +64,7 @@ public class UserRegistration {
 			case 5:
 				System.out.println("Validate Password:");
 				String password = sc.next();
-				String str5 = "^[a-z A-Z]{8}$";
+				String str5 = "^[A-Z a-z]{8,}$";
 				if (password.matches(str5)) {
 					System.out.println("Valid");
 				}
