@@ -6,7 +6,7 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 		Scanner sc =  new Scanner(System.in);
-		System.out.println("1.First Name 2.Last Name 3.Email");
+		System.out.println("1.First Name 2.Last Name 3.Email 4.Phone Number 5.Password");
 		int option = sc.nextInt();
 
 		switch(option) {
@@ -45,7 +45,7 @@ public class UserRegistration {
 					System.out.println("Valid");
 				}
 				else {
-					System.out.println("Enter email");
+					System.out.println("Enter valid email");
 				}
 				break;
 				
@@ -57,7 +57,19 @@ public class UserRegistration {
 					System.out.println("Valid");
 				}
 				else {
-					System.out.println("Enter email");
+					System.out.println("Enter valid phone number");
+				}
+				break;
+				
+			case 5:
+				System.out.println("Validate Password:");
+				String password = sc.next();
+				String str5 = "^[a-z A-Z]{8}$";
+				if (password.matches(str5)) {
+					System.out.println("Valid");
+				}
+				else {
+					System.out.println("Enter valid password");
 				}
 				break;
 			
