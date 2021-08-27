@@ -34,6 +34,8 @@ public class UserRegistration {
 				else {
 					System.out.println("Enter valid name");
 				}
+				break;
+				
 			case 3:
 				System.out.println("Validate email:");
 				//String dummy2 = sc.nextLine();
@@ -45,7 +47,20 @@ public class UserRegistration {
 				else {
 					System.out.println("Enter email");
 				}
+				break;
 				
+			case 4:
+				System.out.println("Validate Phone Number:");
+				String phoneNum = sc.next();
+				String str4 = "^([0-9]{2})?([0-9]{10})$";
+				if (phoneNum.matches(str4)) {
+					System.out.println("Valid");
+				}
+				else {
+					System.out.println("Enter email");
+				}
+				break;
+			
 				
 		}
 		
