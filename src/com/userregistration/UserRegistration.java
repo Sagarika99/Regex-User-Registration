@@ -51,11 +51,12 @@ public class UserRegistration {
 				
 			case 4:
 				System.out.println("Validate Phone Number:");
-				String phoneNum = sc.next();
-				String str4 = "^([0-9]{2})?([0-9]{10})$";
+				String dummy2 = sc.nextLine();
+				String phoneNum = sc.nextLine();
+				String str4 = "^[0-9]{2}\\s[0-9]{10}$";
 				if (phoneNum.matches(str4)) {
 					System.out.println("Valid");
-				}
+				} 
 				else {
 					System.out.println("Enter valid phone number");
 				}
@@ -63,8 +64,9 @@ public class UserRegistration {
 				
 			case 5:
 				System.out.println("Validate Password:");
-				String password = sc.next();
-				String str5 = "^[A-Z a-z]{8,}$";
+				String dummy3 = sc.nextLine();
+				String password = sc.nextLine();
+				String str5 = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,20}$";
 				if (password.matches(str5)) {
 					System.out.println("Valid");
 				}
